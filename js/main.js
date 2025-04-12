@@ -73,33 +73,35 @@ function createCards(prods){
         const modalId = `modal-${producto.id}`;
 
         mainProds.insertAdjacentHTML("beforeend",
-            `<div class="card" style="width: 18rem;">
-                <img src="${producto.image}" class="card-img-top" alt="${producto.title}">
-                <div class="card-body">
-                    <h5 class="card-title">${producto.title}</h5>
-                    <p class="card-text"> - ${producto.category} - </p>
-                    <p class="card-text">${producto.description.slice(0, 100)}...</p>
-                    <p class="card-text">${producto.rating.rate}</p>
+            `<div class="col-sm">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="${producto.image}" class="card-img-top" alt="${producto.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${producto.title}</h5>
+                        <p class="card-text"> - ${producto.category} - </p>
+                        <p class="card-text">${producto.description.slice(0, 100)}...</p>
+                        <p class="card-text">${producto.rating.rate}</p>
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">
-                    More info
-                    </button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">
+                        More info
+                        </button>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="${modalId}" tabindex="-1" aria-labelledby="${modalId}" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="${modalId}">${producto.title}</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                ${producto.description}
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">$${producto.price}</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="${modalId}" tabindex="-1" aria-labelledby="${modalId}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="${modalId}">${producto.title}</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ${producto.description}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">$${producto.price}</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

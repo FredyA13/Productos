@@ -7,13 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
-
-    <h1>Productos</h1>
+    <main class="container">
+        
+        <div class="row">
+            <div class="col-sm" style="text-align: center;"><h1>Productos</h1></div>
+        </div>
 
         <!-- Example split danger button -->
         <div class="btn-group">
-            <button type="button" class="btn btn-danger">Categorias</button>
-            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-warning">Categorias</button>
+            <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu" id="ulMenu">
@@ -22,8 +25,10 @@
             </ul>
         </div>
 
-    <main class="container">
-        <div id="mainProds"></div>   
+        <hr>
+
+        <div class="row" id="mainProds"></div>
+       
     </main>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
