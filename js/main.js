@@ -17,7 +17,7 @@ function getCategories(){
                         res.forEach((cat) => {
                             ulMenu.insertAdjacentHTML("afterbegin",
                                 //Le agregamos un metodo "onclick"
-                                `<li><a class="dropdown-item" onclick="getData('category/${(cat.replace(",","%27"))}');">${cat}</a></li>`);
+                                `<li><a class="dropdown-item" onclick="getData('category/${(cat.replace("'","%27"))}');">${cat}</a></li>`);
                         });
                     });
                 })
@@ -72,7 +72,7 @@ function createCards(prods){
         const producto = prods[i];
         const modalId = `modal-${producto.id}`;
 
-        main.insertAdjacentHTML("beforeend",
+        mainProds.insertAdjacentHTML("beforeend",
             `<div class="card" style="width: 18rem;">
                 <img src="${producto.image}" class="card-img-top" alt="${producto.title}">
                 <div class="card-body">
@@ -99,7 +99,7 @@ function createCards(prods){
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">${producto.price}</button>
+                                    <button type="button" class="btn btn-primary">$${producto.price}</button>
                                 </div>
                             </div>
                         </div>
@@ -108,3 +108,4 @@ function createCards(prods){
             </div>`);
     }
 }//createCards
+
