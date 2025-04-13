@@ -3,13 +3,22 @@
 
 Este proyecto se enfoca principalmente en el manejo del método"fetch()".
 Este método tiene como objetivo el regreso o la busqueda de recursos mediante la red a través de una "Promise" (Promesa).
+Para manejo de este método se utilizó la API de `https://fakestoreapi.com` la cuál regresa una lista de productos de forma de arreglo (array).
 
-Para manejo de este método se utilizó la API de [https://fakestoreapi.com](fakestoreapi) la cuál regresa una lista de productos de forma de arreglo (array).
+#### Opciones en el método
+Puede tener una lista de opciones, por default este método utiliza como base el método "GET" pero se puede declarar de la siguiente manera.
 
-La creación de las tarjetas de los productos funciona gracias a la función "createCards" que mandamos a llamar dentro de la función "getData()", la cuál
-al estar usando el método "fetch()", su respuesta se permite regresar en formato JSON y nuevamente esta será una promesa.
+```javascript
+const options = {"method": "GET"};
+fetch(URLMain+cat, options)
+```
 
-De esta forma la manipulacion de la información de la API se facilitará gracias a que la respuesta del método fetch() puede manejar formatos JSON.
+#### Creacion de cartas representativas de los productos
+
+La creación de las tarjetas de los productos funciona gracias a la función "createCards" que se manda a llamar dentro de la función "getData()", la cuál
+al estar usando el método "fetch()", su respuesta se permite regresar en formato JSON y nuevamente en forma de promesa.
+
+De esta manera la manipulacion de la información de la API se facilitará gracias a que la respuesta del método fetch() puede manejar formatos JSON.
 
 > getData()
 
