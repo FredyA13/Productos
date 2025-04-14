@@ -1,4 +1,8 @@
 # Productos
+
+### Enlace de la página
+[Productos](https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch)
+
 ### Proyecto usando el método fetch
 
 Este proyecto se enfoca principalmente en el manejo del método"fetch()".
