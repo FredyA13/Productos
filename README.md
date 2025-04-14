@@ -1,7 +1,7 @@
 # Productos
 
-### Enlace de la página
-[Productos](https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch)
+### Enlace de la página:
+[Productos](https://fredya13.github.io/Productos/)
 
 ### Proyecto usando el método fetch
 
